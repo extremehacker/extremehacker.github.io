@@ -1,62 +1,147 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Sydney's secret camera network</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="shortcut icon" href="favicon.ico" />
-    <script src="main.js"></script>
+    <title>Extreme Hacker 2.0</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <style>
+    html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+    body{margin:0}
+    h1{font-size:2em;margin:.67em 0;text-align: center;font-family:Monospace;font-weight:500;line-height:1.1;color:inherit}
+    img{border:0;width:8.45vw;height:8.45vh}
+    html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+    body{font-family:Monospace;font-size:14px;line-height:1.428571429;color:#0c0;background-color:#222}
+    </style>
+    <script>
+      window.onload = function() {
+        updateImages();
+        setInterval(function(){ updateImages(); }, 10000);
+      };
+
+      function updateImages() {
+        for (i = 0; i < document.getElementsByTagName("img").length; i++) {
+          link = document.getElementsByTagName("img")[i].src;
+          index = link.indexOf("jpg") + 3;
+          link = link.substr(0, index);
+          document.getElementsByTagName("img")[i].src = link + "?" + Math.random();
+        }
+      }
+    </script>
   </head>
   <body>
-    <h1 style="text-align: center">Sydney's secret camera network</h1>
-    <div class="cam-div">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/alisonrd_randwick.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/anzacbr.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/anzacpde.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/citywestlink.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/easterndist.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/foreshore_banksmeadow.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/ghd_airport.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/georgest.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/beecroftrd_epping.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/cumberlandhwy_carlingford.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/eppingrd_lanecove.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/eppingrd_macquariepark.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/falconst_crowsnest.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/gorehillfwy_artarmon.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m2_pennanthills.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/churchst_parra.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/cumberlandhwy_merrylands.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/greatwesternhwy_hazelbrook.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/jrd_rosehill.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m4_auburn.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m4_mayshill.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m4_minchinbury.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m4_prospect.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/5ways.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/audleyrd_audley.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/humehwy_bankstown.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/humehwy_liverpool.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/elizabethdr_livepool.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/humehwy_villawood.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/humehwy_campbelltown.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/humehwy_standrews.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/hunterexp_buchanan.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/hunterexp_allandale.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/hunterexp_branxton.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f3_mooney.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/hunterexpressway_m1.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f3_johnrenshawdr.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f3_kariong.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f3_mountwhite.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/fiveislands_portkembla.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/kosciuszkord_wilsonsvalley.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f6_mtousley.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/memorialdr_towradge.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/princeshwy_albionparkrail.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/princeshwy_batemans.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/princeshwy_bulli.jpg">
-    <img id="img" src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/princeshwy_wollongong.jpg">
-    </div>
+  <h1>Sydney's secret camera network</h1>
+    <a href=https://www.google.com/maps?q=-34.02977,151.10533><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/5ways.jpg" title="5 Ways (Miranda)"></a>
+    <a href=https://www.google.com/maps?q=-33.90641,151.23122><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/alisonrd_randwick.jpg" title="Alison Road (Randwick)"></a>
+    <a href=https://www.google.com/maps?q=-33.86789,151.18022><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/anzacbr.jpg" title="Anzac Bridge"></a>
+    <a href=https://www.google.com/maps?q=-33.89534,151.22151><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/anzacpde.jpg" title="Anzac Parade (Moore Park)"></a>
+    <a href=https://www.google.com/maps?q=-33.80866,151.00533><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/churchst_parra.jpg" title="Church Street (Parramatta)"></a>
+    <a href=https://www.google.com/maps?q=-33.87175,151.17183><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/citywestlink.jpg" title="City West Link"></a>
+    <a href=https://www.google.com/maps?q=-33.77967,151.05237><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/cumberlandhwy_carlingford.jpg" title="Cumberland Highway (Carlingford)"></a>
+    <a href=https://www.google.com/maps?q=-33.83031,150.96039><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/cumberlandhwy_merrylands.jpg" title="Cumberland Highway (Merrylands)"></a>
+    <a href=https://www.google.com/maps?q=-33.90964,151.21303><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/easterndist.jpg" title="Eastern Distributor"></a>
+    <a href=https://www.google.com/maps?q=-33.4184,151.29416><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f3_kariong.jpg" title="M1 Pacific Motorway (Kariong)"></a>
+    <a href=https://www.google.com/maps?q=-33.53074,151.20082><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f3_mooney.jpg" title="M1 Pacific Motorway (Hawkesbury River)"></a>
+    <a href=https://www.google.com/maps?q=-33.45451,151.20595><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f3_mountwhite.jpg" title="M1 Pacific Motorway (Mount White)"></a>
+    <a href=https://www.google.com/maps?q=-33.34475,151.36906><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f3_ourimbah.jpg" title="M1 Pacific Motorway (Ourimbah)"></a>
+    <a href=https://www.google.com/maps?q=-33.71873,151.10991><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f3_wahroonga.jpg" title="M1 Pacific Motorway (Wahroonga)"></a>
+    <a href=https://www.google.com/maps?q=-33.63605,151.14775><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f3_windybanks.jpg" title="M1 Pacific Motorway (Windy Banks)"></a>
+    <a href=https://www.google.com/maps?q=-33.82768,151.20084><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/falconst_crowsnest.jpg" title="Falcon Street (Crows Nest)"></a>
+    <a href=https://www.google.com/maps?q=-33.94447,151.18805><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/ghd_airport.jpg" title="General Holmes Drive (Botany)"></a>
+    <a href=https://www.google.com/maps?q=-33.87375,151.2126><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/williamst.jpg" title="William Street (East Sydney)"></a>
+    <a href=https://www.google.com/maps?q=-33.84727,151.15195><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/gladesvillebr.jpg" title="Gladesville Bridge (Drummoyne)"></a>
+    <a href=https://www.google.com/maps?q=-33.88851,151.11737><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/humehwy_ashfield.jpg" title="Hume Highway (Ashfield)"></a>
+    <a href=https://www.google.com/maps?q=-33.90583,151.04048><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/humehwy_bankstown.jpg" title="Hume Highway (Bankstown)"></a>
+    <a href=https://www.google.com/maps?q=-34.06199,150.78532><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/humehwy_campbelltown.jpg" title="Hume Motorway (Campbelltown)"></a>
+    <a href=https://www.google.com/maps?q=-33.91519,150.92073><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/humehwy_liverpool.jpg" title="Hume Highway (Cumberland Highway, Liverpool)"></a>
+    <a href=https://www.google.com/maps?q=-34.02971,150.82399><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/humehwy_standrews.jpg" title="Hume Motorway (St Andrews)"></a>
+    <a href=https://www.google.com/maps?q=-33.886,151.0681><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/humehwy_strathfield.jpg" title="Hume Highway (Strathfield)"></a>
+    <a href=https://www.google.com/maps?q=-33.88951,150.97311><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/humehwy_villawood.jpg" title="Hume Highway (Villawood)"></a>
+    <a href=https://www.google.com/maps?q=-33.81927,151.02188><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/jrd_rosehill.jpg" title="James Ruse Drive (Rosehill)"></a>
+    <a href=https://www.google.com/maps?q=-33.95253,151.08347><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/knggrd_beverlyhills.jpg" title="King Georges Road (Beverly Hills)"></a>
+    <a href=https://www.google.com/maps?q=-33.75906,151.04926><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m2_pennanthills.jpg" title="M2 (Pennant Hills)"></a>
+    <a href=https://www.google.com/maps?q=-33.78199,151.13159><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m2_ryde.jpg" title="M2 (Ryde)"></a>
+    <a href=https://www.google.com/maps?q=-33.79519,150.84489><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m4_minchinbury.jpg" title="M4 Western Motorway (Minchinbury)"></a>
+    <a href=https://www.google.com/maps?q=-33.85557,151.06433><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m4_olympic.jpg" title="M4 Western Motorway (Olympic Park)"></a>
+    <a href=https://www.google.com/maps?q=-33.80546,150.91589><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m4_prospect.jpg" title="M4 Western Motorway (Prospect)"></a>
+    <a href=https://www.google.com/maps?q=-33.78512,150.77086><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m4_stmarys.jpg" title="M4 Western Motorway (St Marys)"></a>
+    <a href=https://www.google.com/maps?q=-33.95648,150.87645><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m5_m7.jpg" title="M5 / M7"></a>
+    <a href=https://www.google.com/maps?q=-33.93819,150.9135><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m5_liverpool.jpg" title="M5 (Liverpool)"></a>
+    <a href=https://www.google.com/maps?q=-33.94493,150.98242><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m5_milperra.jpg" title="M5 (Milperra)"></a>
+    <a href=https://www.google.com/maps?q=-33.94291,151.0769><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m5east.jpg" title="M5 East (Beverly Hills)"></a>
+    <a href=https://www.google.com/maps?q=-33.73796,150.91777><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m7_glenwood.jpg" title="M7 (Glenwood)"></a>
+    <a href=https://www.google.com/maps?q=-33.84171,150.85556><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m7_horsleydr.jpg" title="M7 at The Horsley Drive (Horsley Park)"></a>
+    <a href=https://www.google.com/maps?q=-33.8017,151.24631><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/manlyrd.jpg" title="Manly Road (Seaforth)"></a>
+    <a href=https://www.google.com/maps?q=-33.8315,151.22231><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/militaryrd_neutralbay.jpg" title="Military Road (Neutral Bay)"></a>
+    <a href=https://www.google.com/maps?q=-33.70421,150.93016><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/oldwindsorrd.jpg" title="Old Windsor Road (Beaumont Hills)"></a>
+    <a href=https://www.google.com/maps?q=-33.76579,150.95857><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/oldwindsorrd_winstonhills.jpg" title="Old Windsor Road (Winston Hills)"></a>
+    <a href=https://www.google.com/maps?q=-33.79836,151.17851><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/pacific_chats.jpg" title="Pacific Highway (Chatswood)"></a>
+    <a href=https://www.google.com/maps?q=-33.75077,151.14731><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/pacific_pymble.jpg" title="Ryde Road (Pymble)"></a>
+    <a href=https://www.google.com/maps?q=-33.88904,151.15317><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/parrard_leichhardt.jpg" title="Parramatta Road (Leichhardt)"></a>
+    <a href=https://www.google.com/maps?q=-33.82758,151.00475><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/parrard_parra.jpg" title="Parramatta Road (Parramatta)"></a>
+    <a href=https://www.google.com/maps?q=-33.84504,151.04221><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/parrard_silverwater.jpg" title="Parramatta Road (Silverwater)"></a>
+    <a href=https://www.google.com/maps?q=-33.86652,151.09364><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/parrard_strathfield.jpg" title="Parramatta Road (Strathfield)"></a>
+    <a href=https://www.google.com/maps?q=-33.70989,151.29582><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/pittwaterrd_narrabeen.jpg" title="Pittwater Road (Narrabeen)"></a>
+    <a href=https://www.google.com/maps?q=-33.98789,151.11166><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/princes_blakehurst.jpg" title="Princes Highway (Blakehurst)"></a>
+    <a href=https://www.google.com/maps?q=-33.96433,151.13719><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/princes_kogarah.jpg" title="Princes Highway (Kogarah)"></a>
+    <a href=https://www.google.com/maps?q=-33.9156,151.17467><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/princes_stpeters.jpg" title="Princes Highway (St Peters)"></a>
+    <a href=https://www.google.com/maps?q=-33.82227,151.09685><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/rydebridge.jpg" title="Ryde Bridge (Ryde)"></a>
+    <a href=https://www.google.com/maps?q=-33.76812,150.9429><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/sevenhillsrd_sevenhills.jpg" title="Seven Hills Road (Seven Hills)"></a>
+    <a href=https://www.google.com/maps?q=-33.93581,151.20738><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/scd_eastlakes.jpg" title="Southern Cross Drive (Eastlakes)"></a>
+    <a href=https://www.google.com/maps?q=-33.7965,151.06529><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/stewartst_eastwood.jpg" title="Stewart Street (Eastwood)"></a>
+    <a href=https://www.google.com/maps?q=-33.89104,151.24969><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/sed_bondijunction.jpg" title="Syd Einfeld Drive (Bondi Junction)"></a>
+    <a href=https://www.google.com/maps?q=-33.85106,151.21152><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/harbourbridge.jpg" title="Sydney Harbour Bridge"></a>
+    <a href=https://www.google.com/maps?q=-33.9609,151.15636><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/grandpde_bls.jpg" title="The Grand Parade (Brighton-Le-Sands)"></a>
+    <a href=https://www.google.com/maps?q=-33.83002,151.12679><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/victoriard_gladesville.jpg" title="Victoria Road (Gladesville)"></a>
+    <a href=https://www.google.com/maps?q=-33.83339,151.21196><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/warringahfwy.jpg" title="Warringah Freeway (North Sydney)"></a>
+    <a href=https://www.google.com/maps?q=-33.77139,151.20522><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/warringahrd_forestville.jpg" title="Warringah Road (Forestville)"></a>
+    <a href=https://www.google.com/maps?q=-33.75168,151.22659><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/warringahrd_frenchsforest.jpg" title="Warringah Road (Frenchs Forest)"></a>
+    <a href=https://www.google.com/maps?q=-33.88291,151.2041><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/georgest.jpg" title="George Street (Railway square)"></a>
+    <a href=https://www.google.com/maps?q=-36.350024,148.522067><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/kosciuszkord_wilsonsvalley.jpg" title="Kosciuszko Road (Wilson&#39;s Valley)"></a>
+    <a href=https://www.google.com/maps?q=-33.777707,151.108333><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/eppingrd_macquariepark.jpg" title="Epping Road (Macquarie Park)"></a>
+    <a href=https://www.google.com/maps?q=-33.730807,151.081401><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/pennanthillsrd_thornleigh.jpg" title="Pennant Hills Road (Thornleigh)"></a>
+    <a href=https://www.google.com/maps?q=-33.838697,151.035992><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m4_auburn.jpg" title="M4 Western Motorway (Auburn)"></a>
+    <a href=https://www.google.com/maps?q=-33.810643,151.163759><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/eppingrd_lanecove.jpg" title="Epping Road (Lane Cove)"></a>
+    <a href=https://www.google.com/maps?q=-33.720882,150.451611><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/greatwesternhwy_hazelbrook.jpg" title="Great Western Highway (Hazelbrook)"></a>
+    <a href=https://www.google.com/maps?q=-34.073084,151.056689><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/audleyrd_audley.jpg" title="Audley Road (Audley Weir)"></a>
+    <a href=https://www.google.com/maps?q=-33.770871,151.080881><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/beecroftrd_epping.jpg" title="Carlingford Road (Epping)"></a>
+    <a href=https://www.google.com/maps?q=-32.8134,151.635833><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f3_johnrenshawdr.jpg" title="M1 Pacific Motorway (John Renshaw Drive)"></a>
+    <a href=https://www.google.com/maps?q=-33.228646,151.422404><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f3_sparkesrd.jpg" title="M1 Pacific Motorway (Sparks Road)"></a>
+    <a href=https://www.google.com/maps?q=-34.079598,151.010562><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f6_waterfall.jpg" title="Princes Highway (Heathcote)"></a>
+    <a href=https://www.google.com/maps?q=-34.39078,150.858024><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/f6_mtousley.jpg" title="M1 Princes Motorway (Mt Ousley)"></a>
+    <a href=https://www.google.com/maps?q=-33.817233,151.201508><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/gorehillfwy_artarmon.jpg" title="Gore Hill Freeway (Artarmon)"></a>
+    <a href=https://www.google.com/maps?q=-33.81629,150.963639><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m4_mayshill.jpg" title="M4 Western Motorway (Mays Hill)"></a>
+    <a href=https://www.google.com/maps?q=-33.940298,151.035648><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m5_padstow.jpg" title="M5 (Padstow)"></a>
+    <a href=https://www.google.com/maps?q=-32.821351,151.682176><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/newenglandhwy_hexham.jpg" title="New England Highway (Hexham)"></a>
+    <a href=https://www.google.com/maps?q=-32.9044,151.687725><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/newcastlelinkrd_newcastle.jpg" title="Newcastle Road (Newcastle)"></a>
+    <a href=https://www.google.com/maps?q=-34.55638,150.791795><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/princeshwy_albionparkrail.jpg" title="Princes Highway (Albion Park Rail)"></a>
+    <a href=https://www.google.com/maps?q=-34.035113,151.066129><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/princeshwy_sutherland.jpg" title="Princes Highway (Sutherland)"></a>
+    <a href=https://www.google.com/maps?q=-33.843141,151.043805><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/silverwaterrd_silverwater.jpg" title="Silverwater Road (Silverwater)"></a>
+    <a href=https://www.google.com/maps?q=-34.412822,150.8926><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/princeshwy_wollongong.jpg" title="Princes Highway (Wollongong)"></a>
+    <a href=https://www.google.com/maps?q=-32.88914,151.601391><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/hunterexpressway_m1.jpg" title="M1 Pacific Motorway (Hunter Expressway)"></a>
+    <a href=https://www.google.com/maps?q=-33.938402,151.151576><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m5_arncliffe.jpg" title="Marsh Street (Arncliffe)"></a>
+    <a href=https://www.google.com/maps?q=-34.067885,150.802497><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/narelland_campbelltown.jpg" title="Narellan Road (Campbelltown)"></a>
+    <a href=https://www.google.com/maps?q=-33.886095,151.138868><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/parra_ashfield.jpg" title="Parramatta Road (Ashfield)"></a>
+    <a href=https://www.google.com/maps?q=-35.70812,150.174801><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/princeshwy_batemans.jpg" title="Princes Highway (Batemans Bay)"></a>
+    <a href=https://www.google.com/maps?q=-34.329975,150.913954><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/princeshwy_bulli.jpg" title="Princes Highway (Bulli)"></a>
+    <a href=https://www.google.com/maps?q=-34.023547,151.007751><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/alfords_bangorbp.jpg" title="New Illawarra Road (Bangor Bypass)"></a>
+    <a href=https://www.google.com/maps?q=-33.91941,150.919356><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/elizabethdr_livepool.jpg" title="Hume Highway (Elizabeth Drive, Liverpool)"></a>
+    <a href=https://www.google.com/maps?q=-34.465594,150.871564><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/fiveislands_portkembla.jpg" title="Five Islands Road (Port Kembla)"></a>
+    <a href=https://www.google.com/maps?q=-33.85429,151.076989><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/homebushbay_homebush.jpg" title="Homebush Bay Drive (Homebush)"></a>
+    <a href=https://www.google.com/maps?q=-34.383533,150.900312><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/memorialdr_towradge.jpg" title="Memorial Drive (Towradgi)"></a>
+    <a href=https://www.google.com/maps?q=-30.70743,152.920825><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/pacifichwy_macksville.jpg" title="Pacific Highway (Macksville)"></a>
+    <a href=https://www.google.com/maps?q=-33.740195,151.064007><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/pennanthills_beecroft.jpg" title="Pennant Hills Road (Beecroft)"></a>
+    <a href=https://www.google.com/maps?q=-32.809658,151.709905><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/pacifichwy_tomago.jpg" title="Pacific Highway (Tomago)"></a>
+    <a href=https://www.google.com/maps?q=-34.552399,150.859907><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/shellharbour_warilla.jpg" title="Shellharbour Road (Warilla)"></a>
+    <a href=https://www.google.com/maps?q=-33.865088,151.205623><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/yorkst_sydney.jpg" title="York Street (Sydney)"></a>
+    <a href=https://www.google.com/maps?q=-33.788582,151.265661><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/burntbrdg_seaforth.jpg" title="Burnt Bridge Creek (Balgowlah)"></a>
+    <a href=https://www.google.com/maps?q=-33.965695,151.094534><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/kinggeorge_hurstville.jpg" title="King Georges Road (Hurstville)"></a>
+    <a href=https://www.google.com/maps?q=-33.937089,151.103865><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/m5_kingsgrove.jpg" title="M5 (Kinsgrove)"></a>
+    <a href=https://www.google.com/maps?q=-33.876651,151.231838><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/newsthhead_edgecliff.jpg" title="New South Head Road (Edgecliff)"></a>
+    <a href=https://www.google.com/maps?q=-33.890973,151.253425><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/oldsthhead_bondi.jpg" title="Old South Head Road (Bondi Junction)"></a>
+    <a href=https://www.google.com/maps?q=-33.961818,151.214619><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/foreshore_banksmeadow.jpg" title="Foreshore Road (Banksmeadow)"></a>
+    <a href=https://www.google.com/maps?q=-32.829628,151.529815><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/hunterexp_buchanan.jpg" title="Hunter Expressway (Buchanan)"></a>
+    <a href=https://www.google.com/maps?q=-32.723488,151.403663><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/hunterexp_allandale.jpg" title="Hunter Expressway and Lovedale Rd"></a>
+    <a href=https://www.google.com/maps?q=-32.668371,151.361121><img src="http://www.rms.nsw.gov.au/trafficreports/cameras/camera_images/hunterexp_branxton.jpg" title="Hunter Expressway and Wine Country Dr"></a>
   </body>
 </html>
